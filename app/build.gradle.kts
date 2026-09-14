@@ -92,12 +92,14 @@ android {
         buildConfigField("String", "LASTFM_SECRET", "\"$lastfmSecret\"")
     }
 
-    val keystoreExists = rootProject.file("keystore.properties").exists() && rootProject.file("vz-pixelmusic.jks").exists()
+    val configuredStoreFile = keystoreProperties.getProperty("storeFile")?.let { rootProject.file(it) }
+        ?: rootProject.file("saudora-release.jks")
+    val keystoreExists = rootProject.file("keystore.properties").exists() && configuredStoreFile.exists()
 
     signingConfigs {
         if (keystoreExists) {
             create("release") {
-                storeFile = rootProject.file("vz-pixelmusic.jks")
+                storeFile = configuredStoreFile
                 storePassword = keystoreProperties.getProperty("storePassword")
                 keyAlias = keystoreProperties.getProperty("keyAlias")
                 keyPassword = keystoreProperties.getProperty("keyPassword")
@@ -111,8 +113,10 @@ android {
         }
 
         release {
-            if (keystoreExists) {
-                signingConfig = signingConfigs.getByName("release")
+            signingConfig = if (keystoreExists) {
+                signingConfigs.getByName("release")
+            } else {
+                signingConfigs.getByName("debug")
             }
             isMinifyEnabled = true
             isShrinkResources = true
