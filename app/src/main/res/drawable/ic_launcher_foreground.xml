@@ -1,0 +1,78 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.217742"
+        android:scaleY="0.217742"
+        android:translateX="-1.7419"
+        android:translateY="0.0">
+        <!-- Inner Dark Negative Space Cavity -->
+        <path
+            android:pathData="M206,192 C236,182 284,188 308,212 C328,232 320,268 290,294 C260,320 216,306 206,290 C220,270 230,225 206,192 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="200"
+                    android:startY="190"
+                    android:endX="310"
+                    android:endY="290">
+                    <item android:offset="0.0" android:color="#FF1F0829" />
+                    <item android:offset="1.0" android:color="#FF0E0514" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <!-- Upper Loop of 'S' -->
+        <path
+            android:pathData="M172,250 C160,205 174,152 220,138 C268,124 336,146 336,188 C336,220 286,230 252,204 C216,176 195,200 230,272 L172,250 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="160"
+                    android:startY="130"
+                    android:endX="340"
+                    android:endY="240">
+                    <item android:offset="0.0" android:color="#FFFCD3F2" />
+                    <item android:offset="0.25" android:color="#FFF488D9" />
+                    <item android:offset="0.65" android:color="#FFBD56F3" />
+                    <item android:offset="1.0" android:color="#FF9B51E0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <!-- Bottom Loop of 'S' -->
+        <path
+            android:pathData="M166,280 C162,298 185,348 244,360 C302,372 352,328 344,260 C340,240 316,242 306,260 C290,292 254,306 220,296 C190,286 172,274 166,280 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="160"
+                    android:startY="280"
+                    android:endX="350"
+                    android:endY="355">
+                    <item android:offset="0.0" android:color="#FFF7A1E5" />
+                    <item android:offset="0.4" android:color="#FFA855F7" />
+                    <item android:offset="0.85" android:color="#FF7C3AED" />
+                    <item android:offset="1.0" android:color="#FF6D28D9" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <!-- Play Button Triangle -->
+        <path
+            android:pathData="M242,216 L286,244 C294,249 294,259 286,264 L242,292 C234,297 225,291 225,282 L225,226 C225,217 234,211 242,216 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="230"
+                    android:startY="210"
+                    android:endX="295"
+                    android:endY="270">
+                    <item android:offset="0.0" android:color="#FFF695E6" />
+                    <item android:offset="0.5" android:color="#FFC062F5" />
+                    <item android:offset="1.0" android:color="#FF9333EA" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+</vector>

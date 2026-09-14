@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.217742"
+        android:scaleY="0.217742"
+        android:translateX="-1.7419"
+        android:translateY="0.0">
+        <!-- Upper Loop -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M172,250 C160,205 174,152 220,138 C268,124 336,146 336,188 C336,220 286,230 252,204 C216,176 195,200 230,272 L172,250 Z" />
+        <!-- Bottom Loop -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M166,280 C162,298 185,348 244,360 C302,372 352,328 344,260 C340,240 316,242 306,260 C290,292 254,306 220,296 C190,286 172,274 166,280 Z" />
+        <!-- Play Button Triangle -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M242,216 L286,244 C294,249 294,259 286,264 L242,292 C234,297 225,291 225,282 L225,226 C225,217 234,211 242,216 Z" />
+    </group>
+</vector>
