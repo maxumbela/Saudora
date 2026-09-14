@@ -94,7 +94,6 @@ import com.unshoo.pixelmusic.data.model.Song
 import com.unshoo.pixelmusic.data.preferences.CollagePattern
 import com.unshoo.pixelmusic.presentation.components.AlbumArtCollage
 import com.unshoo.pixelmusic.presentation.components.BetaInfoBottomSheet
-import com.unshoo.pixelmusic.presentation.components.Beta05CleanInstallDisclaimerDialog
 import com.unshoo.pixelmusic.presentation.components.ChangelogBottomSheet
 import com.unshoo.pixelmusic.presentation.components.DailyMixSection
 import com.unshoo.pixelmusic.presentation.components.HomeGradientTopBar
@@ -288,7 +287,6 @@ fun HomeScreen(
     var showChangelogBottomSheet by remember { mutableStateOf(false) }
     var showBetaInfoBottomSheet by remember { mutableStateOf(false) }
     var showStreamingProviderSheet by remember { mutableStateOf(false) }
-    var cleanInstallDisclaimerDismissedThisSession by rememberSaveable { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState()
     val betaSheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
@@ -342,9 +340,6 @@ fun HomeScreen(
 
     // Drawer state for sidebar
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-    val shouldShowCleanInstallDisclaimer =
-        settingsUiState.beta05CleanInstallDisclaimerDismissed == false &&
-            !cleanInstallDisclaimerDismissedThisSession
 
     Box(
         modifier = Modifier.fillMaxSize()
@@ -653,16 +648,6 @@ fun HomeScreen(
             onDismissRequest = { showStreamingProviderSheet = false },
             onNavigateToYoutubeAuth = {
                 navController.navigateSafely(Screen.YoutubeAuth.route)
-            }
-        )
-    }
-    if (shouldShowCleanInstallDisclaimer) {
-        Beta05CleanInstallDisclaimerDialog(
-            onDismiss = { dontShowAgain ->
-                cleanInstallDisclaimerDismissedThisSession = true
-                if (dontShowAgain) {
-                    settingsViewModel.setBeta05CleanInstallDisclaimerDismissed(true)
-                }
             }
         )
     }
